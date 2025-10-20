@@ -1,0 +1,153 @@
+<!--pages/game-four-cards/game-four-cards.wxml-->
+<view class="game-container">
+  <!-- 游戏头部信息 -->
+  <view class="game-header">
+    <view class="game-info">
+      <view class="game-title">四张牌</view>
+      <view class="room-info">
+        <view class="room-code">房间号: {{roomCode}}</view>
+        <view class="current-player">当前玩家: {{currentPlayerName}}</view>
+      </view>
+    </view>
+    <view class="game-controls">
+      <button class="btn btn-ghost btn-sm" bindtap="pauseGame">暂停</button>
+      <button class="btn btn-ghost btn-sm" bindtap="exitGame">退出</button>
+    </view>
+  </view>
+
+  <!-- 玩家信息 -->
+  <view class="players-info">
+    <view class="player-card {{index === currentPlayer ? 'active' : ''}}" 
+          wx:for="{{players}}" 
+          wx:key="id">
+      <view class="player-avatar">
+        <image class="avatar" src="{{item.avatarUrl || '/assets/images/default-avatar.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="player-info">
+        <view class="player-name">{{item.nickname}}</view>
+        <view class="player-stats">
+          <view class="stat">分数: {{item.score}}</view>
+          <view class="stat">抓分: {{item.noteScore}}</view>
+          <view class="stat">牌数: {{item.cardCount}}</view>
+        </view>
+      </view>
+      <view class="player-status">
+        <view class="status-text">{{item.status}}</view>
+        <view class="timer" wx:if="{{item.timer > 0}}">{{item.timer}}s</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 桌面区域 -->
+  <view class="desktop-area">
+    <view class="desktop-score">
+      <view class="score-label">桌面分数</view>
+      <view class="score-value">{{desktopScore}}</view>
+    </view>
+    <view class="desktop-cards">
+      <view class="card {{card.faceUp ? 'face-up' : 'face-down'}}" 
+            wx:for="{{desktopCards}}" 
+            wx:key="id">
+        <view class="card-content" wx:if="{{card.faceUp}}">
+          <view class="card-suit">{{card.suit}}</view>
+          <view class="card-rank">{{card.rank}}</view>
+        </view>
+        <view class="card-back" wx:else>
+          <view class="card-pattern">🂠</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 我的手牌 -->
+  <view class="my-cards" wx:if="{{myCards.length > 0}}">
+    <view class="cards-title">我的手牌</view>
+    <view class="cards-container">
+      <view class="card {{card.selected ? 'selected' : ''}} {{card.disabled ? 'disabled' : ''}}" 
+            wx:for="{{myCards}}" 
+            wx:key="id"
+            bindtap="selectCard"
+            data-card-id="{{card.id}}">
+        <view class="card-content">
+          <view class="card-suit">{{card.suit}}</view>
+          <view class="card-rank">{{card.rank}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="game-actions" wx:if="{{isMyTurn}}">
+    <button class="btn btn-primary" 
+            bindtap="playCards" 
+            disabled="{{selectedCards.length === 0}}">
+      出牌 ({{selectedCards.length}})
+    </button>
+    <button class="btn btn-outline" bindtap="skipTurn">不出</button>
+  </view>
+
+  <!-- 游戏提示 -->
+  <view class="game-hints" wx:if="{{showHint}}">
+    <view class="hint-text">{{hintText}}</view>
+  </view>
+
+  <!-- 游戏结果弹窗 -->
+  <view class="modal-overlay" wx:if="{{showResult}}" bindtap="hideResult">
+    <view class="modal-content result-modal" catchtap="true">
+      <view class="result-header">
+        <view class="result-title">{{gameResult.title}}</view>
+        <view class="result-subtitle">{{gameResult.subtitle}}</view>
+      </view>
+      <view class="result-content">
+        <view class="players-ranking">
+          <view class="ranking-item {{index === 0 ? 'winner' : ''}}" 
+                wx:for="{{gameResult.players}}" 
+                wx:key="id">
+            <view class="ranking-number">{{index + 1}}</view>
+            <image class="player-avatar" src="{{item.avatarUrl}}" mode="aspectFill"></image>
+            <view class="player-info">
+              <view class="player-name">{{item.nickname}}</view>
+              <view class="player-score">分数: {{item.score}}</view>
+            </view>
+            <view class="player-note-score">抓分: {{item.noteScore}}</view>
+          </view>
+        </view>
+        <view class="game-stats">
+          <view class="stat-item">
+            <view class="stat-label">游戏时长</view>
+            <view class="stat-value">{{gameResult.duration}}</view>
+          </view>
+          <view class="stat-item">
+            <view class="stat-label">总回合数</view>
+            <view class="stat-value">{{gameResult.totalTurns}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="result-actions">
+        <button class="btn btn-outline" bindtap="playAgain">再来一局</button>
+        <button class="btn btn-primary" bindtap="backToHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 暂停弹窗 -->
+  <view class="modal-overlay" wx:if="{{showPause}}" bindtap="hidePause">
+    <view class="modal-content pause-modal" catchtap="true">
+      <view class="pause-header">
+        <view class="pause-title">游戏暂停</view>
+      </view>
+      <view class="pause-actions">
+        <button class="btn btn-primary btn-full" bindtap="resumeGame">继续游戏</button>
+        <button class="btn btn-outline btn-full" bindtap="exitGame">退出游戏</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">游戏加载中...</view>
+  </view>
+</view>

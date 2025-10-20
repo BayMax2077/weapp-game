@@ -1,0 +1,85 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <!-- 背景装饰 -->
+  <view class="login-bg">
+    <view class="bg-circle bg-circle-1"></view>
+    <view class="bg-circle bg-circle-2"></view>
+    <view class="bg-circle bg-circle-3"></view>
+  </view>
+
+  <!-- 登录内容 -->
+  <view class="login-content">
+    <!-- Logo区域 -->
+    <view class="logo-section">
+      <image class="logo" src="/assets/images/logo.png" mode="aspectFit"></image>
+      <view class="app-title">游戏大厅</view>
+      <view class="app-subtitle">与好友一起享受游戏乐趣</view>
+    </view>
+
+    <!-- 登录表单 -->
+    <view class="login-form">
+      <!-- 微信登录 -->
+      <button 
+        class="btn btn-primary btn-lg btn-full login-btn wechat-login" 
+        bindtap="handleWxLogin"
+        disabled="{{loading}}"
+        wx:if="{{!isLogin}}"
+      >
+        <view class="btn-content">
+          <image class="btn-icon" src="/assets/images/wechat-icon.png" mode="aspectFit"></image>
+          <text class="btn-text">{{loading ? '登录中...' : '微信登录'}}</text>
+        </view>
+      </button>
+
+      <!-- 游客登录 -->
+      <button 
+        class="btn btn-outline btn-lg btn-full login-btn guest-login" 
+        bindtap="handleGuestLogin"
+        wx:if="{{!isLogin}}"
+      >
+        <view class="btn-content">
+          <image class="btn-icon" src="/assets/images/guest-icon.png" mode="aspectFit"></image>
+          <text class="btn-text">游客模式</text>
+        </view>
+      </button>
+
+      <!-- 已登录状态 -->
+      <view class="logged-in-state" wx:if="{{isLogin}}">
+        <view class="user-avatar">
+          <image class="avatar avatar-xl" src="{{userInfo.avatarUrl || '/assets/images/default-avatar.png'}}" mode="aspectFill"></image>
+        </view>
+        <view class="user-name">{{userInfo.nickname || '游客用户'}}</view>
+        <view class="login-success-text">登录成功！</view>
+        <view class="login-success-desc">正在跳转到首页...</view>
+      </view>
+
+      <!-- 登录说明 -->
+      <view class="login-tips" wx:if="{{!isLogin}}">
+        <view class="tips-title">登录说明</view>
+        <view class="tips-content">
+          <view class="tip-item">• 微信登录：完整功能体验</view>
+          <view class="tip-item">• 游客模式：部分功能受限</view>
+          <view class="tip-item">• 数据安全：信息加密保护</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部信息 -->
+    <view class="login-footer">
+      <view class="footer-text">登录即表示同意</view>
+      <view class="footer-links">
+        <text class="footer-link">用户协议</text>
+        <text class="footer-separator">和</text>
+        <text class="footer-link">隐私政策</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 加载状态 -->
+  <view class="loading-overlay" wx:if="{{loading}}">
+    <view class="loading-content">
+      <view class="loading"></view>
+      <view class="loading-text">正在登录...</view>
+    </view>
+  </view>
+</view>

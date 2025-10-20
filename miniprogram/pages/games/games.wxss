@@ -1,0 +1,483 @@
+/* pages/games/games.wxss */
+@import "../../styles/common.wxss";
+
+/* 游戏头部 */
+.game-header {
+  position: relative;
+  margin-bottom: var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.game-header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.game-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.game-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+}
+
+.game-header-content {
+  position: relative;
+  z-index: 1;
+  padding: var(--spacing-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.game-icon-large {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-info {
+  flex: 1;
+  color: white;
+}
+
+.game-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.game-description {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+}
+
+.game-stats {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-label {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* 操作区域 */
+.action-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.action-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border: none;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  min-height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.action-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+.action-card:active {
+  transform: scale(0.98);
+}
+
+.primary-action {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+}
+
+.primary-action::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.secondary-action {
+  background: linear-gradient(135deg, var(--success-color), #34d399);
+  color: white;
+}
+
+.secondary-action::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tertiary-action {
+  background: linear-gradient(135deg, var(--warning-color), #fbbf24);
+  color: white;
+}
+
+.tertiary-action::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.info-action {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: white;
+}
+
+.info-action::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.action-icon {
+  font-size: 32px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.action-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.action-desc {
+  font-size: 12px;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* 房间列表 */
+.rooms-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.room-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.room-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.room-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.room-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.room-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.room-details {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: center;
+}
+
+.room-players {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.room-status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.room-status[data-status="waiting"] {
+  background: rgb(16 185 129 / 0.1);
+  color: var(--success-color);
+}
+
+.room-status[data-status="playing"] {
+  background: rgb(245 158 11 / 0.1);
+  color: var(--warning-color);
+}
+
+.room-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+}
+
+.room-code {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-family: 'Courier New', monospace;
+}
+
+.join-indicator {
+  font-size: 18px;
+  color: var(--text-light);
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+}
+
+.empty-icon {
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.empty-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.empty-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* 模态框 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: var(--spacing-lg);
+}
+
+.modal-content {
+  background: var(--bg-primary);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.modal-close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: var(--error-color);
+  color: white;
+}
+
+.modal-body {
+  padding: var(--spacing-lg);
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.rules-content {
+  line-height: 1.6;
+}
+
+.rule-item {
+  margin-bottom: var(--spacing-lg);
+}
+
+.rule-item:last-child {
+  margin-bottom: 0;
+}
+
+.rule-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.rule-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .game-header-content {
+    padding: var(--spacing-lg);
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .game-icon-large {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .game-title {
+    font-size: 20px;
+  }
+  
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-card {
+    min-height: 100px;
+    padding: var(--spacing-md);
+  }
+  
+  .action-icon {
+    font-size: 24px;
+  }
+  
+  .action-title {
+    font-size: 14px;
+  }
+  
+  .action-desc {
+    font-size: 11px;
+  }
+  
+  .room-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .room-name {
+    font-size: 14px;
+  }
+  
+  .room-details {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 320px) {
+  .game-header-content {
+    padding: var(--spacing-md);
+  }
+  
+  .game-icon-large {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .game-title {
+    font-size: 18px;
+  }
+  
+  .action-card {
+    min-height: 80px;
+    padding: var(--spacing-sm);
+  }
+  
+  .action-icon {
+    font-size: 20px;
+  }
+}

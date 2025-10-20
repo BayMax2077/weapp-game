@@ -1,0 +1,137 @@
+<!--pages/game-eliminating/game-eliminating.wxml-->
+<view class="game-container">
+  <!-- 游戏头部信息 -->
+  <view class="game-header">
+    <view class="game-info">
+      <view class="game-title">消消乐</view>
+      <view class="game-stats">
+        <view class="stat-item">
+          <view class="stat-label">分数</view>
+          <view class="stat-value">{{score}}</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-label">步数</view>
+          <view class="stat-value">{{moves}}</view>
+        </view>
+        <view class="stat-item">
+          <view class="stat-label">目标</view>
+          <view class="stat-value">{{target}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="game-controls">
+      <button class="btn btn-ghost btn-sm" bindtap="pauseGame">暂停</button>
+      <button class="btn btn-ghost btn-sm" bindtap="restartGame">重开</button>
+    </view>
+  </view>
+
+  <!-- 游戏棋盘 -->
+  <view class="game-board">
+    <view class="board-container" style="width: {{boardWidth}}px; height: {{boardHeight}}px;">
+      <view 
+        class="game-cell {{item.type}} {{item.selected ? 'selected' : ''}} {{item.eliminating ? 'eliminating' : ''}}" 
+        wx:for="{{gameBoard}}" 
+        wx:key="id"
+        style="left: {{item.x}}px; top: {{item.y}}px; width: {{cellSize}}px; height: {{cellSize}}px;"
+        bindtap="onCellTap"
+        data-cell-id="{{item.id}}"
+        data-row="{{item.row}}"
+        data-col="{{item.col}}"
+      >
+        <view class="cell-content">
+          <image class="cell-icon" src="{{item.icon}}" mode="aspectFit"></image>
+        </view>
+        <view class="cell-effect" wx:if="{{item.eliminating}}"></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游戏提示 -->
+  <view class="game-hints" wx:if="{{showHint}}">
+    <view class="hint-text">{{hintText}}</view>
+  </view>
+
+  <!-- 特殊道具 -->
+  <view class="game-tools" wx:if="{{showTools}}">
+    <view class="tools-title">特殊道具</view>
+    <view class="tools-list">
+      <button class="tool-item" bindtap="useTool" data-tool="bomb">
+        <view class="tool-icon">💣</view>
+        <view class="tool-name">炸弹</view>
+        <view class="tool-count">{{tools.bomb}}</view>
+      </button>
+      <button class="tool-item" bindtap="useTool" data-tool="rainbow">
+        <view class="tool-icon">🌈</view>
+        <view class="tool-name">彩虹</view>
+        <view class="tool-count">{{tools.rainbow}}</view>
+      </button>
+      <button class="tool-item" bindtap="useTool" data-tool="hammer">
+        <view class="tool-icon">🔨</view>
+        <view class="tool-name">锤子</view>
+        <view class="tool-count">{{tools.hammer}}</view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 游戏结果弹窗 -->
+  <view class="modal-overlay" wx:if="{{showResult}}" bindtap="hideResult">
+    <view class="modal-content result-modal" catchtap="true">
+      <view class="result-header">
+        <view class="result-title">{{gameResult.title}}</view>
+        <view class="result-subtitle">{{gameResult.subtitle}}</view>
+      </view>
+      <view class="result-content">
+        <view class="result-stats">
+          <view class="result-stat">
+            <view class="stat-label">最终分数</view>
+            <view class="stat-value">{{gameResult.finalScore}}</view>
+          </view>
+          <view class="result-stat">
+            <view class="stat-label">使用步数</view>
+            <view class="stat-value">{{gameResult.movesUsed}}</view>
+          </view>
+          <view class="result-stat">
+            <view class="stat-label">消除次数</view>
+            <view class="stat-value">{{gameResult.eliminations}}</view>
+          </view>
+        </view>
+        <view class="result-rewards" wx:if="{{gameResult.rewards.length > 0}}">
+          <view class="rewards-title">获得奖励</view>
+          <view class="rewards-list">
+            <view class="reward-item" wx:for="{{gameResult.rewards}}" wx:key="type">
+              <view class="reward-icon">{{item.icon}}</view>
+              <view class="reward-name">{{item.name}}</view>
+              <view class="reward-count">+{{item.count}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="result-actions">
+        <button class="btn btn-outline" bindtap="restartGame">再来一局</button>
+        <button class="btn btn-primary" bindtap="backToHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 暂停弹窗 -->
+  <view class="modal-overlay" wx:if="{{showPause}}" bindtap="hidePause">
+    <view class="modal-content pause-modal" catchtap="true">
+      <view class="pause-header">
+        <view class="pause-title">游戏暂停</view>
+      </view>
+      <view class="pause-actions">
+        <button class="btn btn-primary btn-full" bindtap="resumeGame">继续游戏</button>
+        <button class="btn btn-outline btn-full" bindtap="restartGame">重新开始</button>
+        <button class="btn btn-ghost btn-full" bindtap="backToHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">游戏加载中...</view>
+  </view>
+</view>

@@ -1,0 +1,36 @@
+{
+  "name": "weapp-game-v2",
+  "version": "2.0.0",
+  "description": "现代化微信小程序游戏平台",
+  "main": "server/app.js",
+  "scripts": {
+    "dev": "node server/app.js",
+    "start": "pm2 start server/app.js --name weapp-game",
+    "stop": "pm2 stop weapp-game",
+    "restart": "pm2 restart weapp-game",
+    "init-db": "node server/scripts/initDatabase.js",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.6.3",
+    "redis": "^4.7.1",
+    "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.52.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

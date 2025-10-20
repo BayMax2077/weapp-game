@@ -1,0 +1,132 @@
+<!--pages/shop/shop.wxml-->
+<view class="container">
+  <!-- 用户资产卡片 -->
+  <view class="assets-card" wx:if="{{userAssets}}">
+    <view class="assets-header">
+      <view class="assets-title">我的资产</view>
+      <button class="btn btn-ghost btn-sm" bindtap="refreshUserAssets">
+        <text class="btn-text">刷新</text>
+      </button>
+    </view>
+    <view class="assets-content">
+      <view class="asset-item">
+        <view class="asset-icon">💰</view>
+        <view class="asset-info">
+          <view class="asset-name">金币</view>
+          <view class="asset-value">{{userAssets.coins || 0}}</view>
+        </view>
+      </view>
+      <view class="asset-item">
+        <view class="asset-icon">💎</view>
+        <view class="asset-info">
+          <view class="asset-name">钻石</view>
+          <view class="asset-value">{{userAssets.diamonds || 0}}</view>
+        </view>
+      </view>
+      <view class="asset-item">
+        <view class="asset-icon">🎁</view>
+        <view class="asset-info">
+          <view class="asset-name">道具</view>
+          <view class="asset-value">{{userAssets.items || 0}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 分类导航 -->
+  <view class="category-nav">
+    <scroll-view class="category-scroll" scroll-x="true" show-scrollbar="false">
+      <view class="category-list">
+        <view 
+          class="category-item {{selectedCategory === item.id ? 'active' : ''}}" 
+          wx:for="{{categories}}" 
+          wx:key="id"
+          bindtap="onCategorySelect"
+          data-category-id="{{item.id}}"
+        >
+          <view class="category-icon">{{item.icon}}</view>
+          <view class="category-name">{{item.name}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 商品列表 -->
+  <view class="products-section">
+    <view class="section-header">
+      <view class="section-title">{{currentCategory.name || '全部商品'}}</view>
+      <view class="section-count">{{filteredProducts.length}}个商品</view>
+    </view>
+    
+    <view class="products-grid" wx:if="{{filteredProducts.length > 0}}">
+      <view class="product-card" wx:for="{{filteredProducts}}" wx:key="id" bindtap="onProductBuy" data-product-id="{{item.id}}">
+        <view class="product-image">
+          <image class="product-img" src="{{item.image || '/assets/images/product-default.png'}}" mode="aspectFill"></image>
+          <view class="product-badge" wx:if="{{item.isHot}}">热门</view>
+          <view class="product-badge new" wx:if="{{item.isNew}}">新品</view>
+        </view>
+        <view class="product-info">
+          <view class="product-name">{{item.name}}</view>
+          <view class="product-desc">{{item.description}}</view>
+          <view class="product-price">
+            <view class="price-main">{{item.price}}</view>
+            <view class="price-unit">{{item.currencyName}}</view>
+          </view>
+          <view class="product-actions">
+            <button class="btn btn-primary btn-sm btn-full" catchtap="buyProduct" data-product-id="{{item.id}}">
+              立即购买
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 空状态 -->
+    <view class="empty-state" wx:else>
+      <image class="empty-icon" src="/assets/images/empty-products.png" mode="aspectFit"></image>
+      <view class="empty-text">暂无商品</view>
+      <view class="empty-desc">请选择其他分类</view>
+    </view>
+  </view>
+
+  <!-- 商品详情弹窗 -->
+  <view class="modal-overlay" wx:if="{{showProductDetail}}" bindtap="hideProductDetail">
+    <view class="modal-content product-detail-modal" catchtap="true">
+      <view class="modal-header">
+        <view class="modal-title">商品详情</view>
+        <button class="modal-close" bindtap="hideProductDetail">×</button>
+      </view>
+      <view class="modal-body" wx:if="{{selectedProduct}}">
+        <view class="product-detail-image">
+          <image class="detail-img" src="{{selectedProduct.image || '/assets/images/product-default.png'}}" mode="aspectFill"></image>
+        </view>
+        <view class="product-detail-info">
+          <view class="detail-name">{{selectedProduct.name}}</view>
+          <view class="detail-desc">{{selectedProduct.description}}</view>
+          <view class="detail-price">
+            <view class="price-main">{{selectedProduct.price}}</view>
+            <view class="price-unit">{{selectedProduct.currencyName}}</view>
+          </view>
+          <view class="detail-features" wx:if="{{selectedProduct.features}}">
+            <view class="feature-title">商品特色</view>
+            <view class="feature-list">
+              <view class="feature-item" wx:for="{{selectedProduct.features}}" wx:key="*this">• {{item}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="modal-footer">
+        <button class="btn btn-outline" bindtap="hideProductDetail">取消</button>
+        <button class="btn btn-primary" bindtap="buyProduct" data-product-id="{{selectedProduct.id}}">立即购买</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+</view>

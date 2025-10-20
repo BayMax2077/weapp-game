@@ -1,0 +1,153 @@
+<!--pages/game-flight-chess/game-flight-chess.wxml-->
+<view class="game-container">
+  <!-- 游戏头部信息 -->
+  <view class="game-header">
+    <view class="game-info">
+      <view class="game-title">飞行棋</view>
+      <view class="room-info">
+        <view class="room-code">房间号: {{roomCode}}</view>
+        <view class="current-player">当前玩家: {{currentPlayerName}}</view>
+      </view>
+    </view>
+    <view class="game-controls">
+      <button class="btn btn-ghost btn-sm" bindtap="pauseGame">暂停</button>
+      <button class="btn btn-ghost btn-sm" bindtap="exitGame">退出</button>
+    </view>
+  </view>
+
+  <!-- 玩家信息 -->
+  <view class="players-info">
+    <view class="player-card {{index === currentPlayer ? 'active' : ''}}" 
+          wx:for="{{players}}" 
+          wx:key="id">
+      <view class="player-avatar">
+        <image class="avatar" src="{{item.avatarUrl || '/assets/images/default-avatar.png'}}" mode="aspectFill"></image>
+      </view>
+      <view class="player-info">
+        <view class="player-name">{{item.nickname}}</view>
+        <view class="player-status">{{item.status}}</view>
+      </view>
+      <view class="player-planes">
+        <view class="plane {{plane.status}}" 
+              wx:for="{{item.planes}}" 
+              wx:key="id"
+              wx:for-item="plane">
+          <view class="plane-icon">✈️</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游戏棋盘 -->
+  <view class="game-board">
+    <view class="board-container" style="width: {{boardWidth}}px; height: {{boardHeight}}px;">
+      <!-- 棋盘格子 -->
+      <view class="board-cell {{cell.type}} {{cell.special ? 'special' : ''}}" 
+            wx:for="{{boardCells}}" 
+            wx:key="id"
+            style="left: {{cell.x}}px; top: {{cell.y}}px; width: {{cellSize}}px; height: {{cellSize}}px;"
+            bindtap="onCellTap"
+            data-cell-id="{{cell.id}}"
+            data-cell-index="{{cell.index}}">
+        <view class="cell-content">
+          <view class="cell-number" wx:if="{{cell.number}}">{{cell.number}}</view>
+          <view class="cell-special" wx:if="{{cell.special}}">{{cell.specialText}}</view>
+        </view>
+        
+        <!-- 飞机位置 -->
+        <view class="plane-on-cell {{plane.color}}" 
+              wx:for="{{cell.planes}}" 
+              wx:key="planeId"
+              wx:for-item="plane"
+              style="left: {{plane.x}}px; top: {{plane.y}}px;">
+          <view class="plane-icon">✈️</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 骰子区域 -->
+  <view class="dice-area" wx:if="{{isMyTurn}}">
+    <view class="dice-container">
+      <view class="dice {{diceRolling ? 'rolling' : ''}}" bindtap="rollDice">
+        <view class="dice-face">{{diceValue}}</view>
+      </view>
+      <view class="dice-text">点击投掷</view>
+    </view>
+  </view>
+
+  <!-- 操作提示 -->
+  <view class="game-hints" wx:if="{{showHint}}">
+    <view class="hint-text">{{hintText}}</view>
+  </view>
+
+  <!-- 可移动的飞机选择 -->
+  <view class="movable-planes" wx:if="{{showMovablePlanes}}">
+    <view class="planes-title">选择要移动的飞机</view>
+    <view class="planes-list">
+      <button class="plane-option" 
+              wx:for="{{movablePlanes}}" 
+              wx:key="id"
+              bindtap="selectPlane"
+              data-plane-id="{{item.id}}">
+        <view class="plane-icon">✈️</view>
+        <view class="plane-info">
+          <view class="plane-name">{{item.name}}</view>
+          <view class="plane-position">位置: {{item.position}}</view>
+        </view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 游戏结果弹窗 -->
+  <view class="modal-overlay" wx:if="{{showResult}}" bindtap="hideResult">
+    <view class="modal-content result-modal" catchtap="true">
+      <view class="result-header">
+        <view class="result-title">{{gameResult.title}}</view>
+        <view class="result-subtitle">{{gameResult.subtitle}}</view>
+      </view>
+      <view class="result-content">
+        <view class="winner-info">
+          <image class="winner-avatar" src="{{gameResult.winner.avatarUrl}}" mode="aspectFill"></image>
+          <view class="winner-name">{{gameResult.winner.nickname}}</view>
+          <view class="winner-text">获得胜利！</view>
+        </view>
+        <view class="game-stats">
+          <view class="stat-item">
+            <view class="stat-label">游戏时长</view>
+            <view class="stat-value">{{gameResult.duration}}</view>
+          </view>
+          <view class="stat-item">
+            <view class="stat-label">总回合数</view>
+            <view class="stat-value">{{gameResult.totalTurns}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="result-actions">
+        <button class="btn btn-outline" bindtap="playAgain">再来一局</button>
+        <button class="btn btn-primary" bindtap="backToHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 暂停弹窗 -->
+  <view class="modal-overlay" wx:if="{{showPause}}" bindtap="hidePause">
+    <view class="modal-content pause-modal" catchtap="true">
+      <view class="pause-header">
+        <view class="pause-title">游戏暂停</view>
+      </view>
+      <view class="pause-actions">
+        <button class="btn btn-primary btn-full" bindtap="resumeGame">继续游戏</button>
+        <button class="btn btn-outline btn-full" bindtap="exitGame">退出游戏</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">游戏加载中...</view>
+  </view>
+</view>

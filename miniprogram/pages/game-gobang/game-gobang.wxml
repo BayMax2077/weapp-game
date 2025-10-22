@@ -1,0 +1,108 @@
+<!--pages/game-gobang/game-gobang.wxml-->
+<view class="game-container">
+  <!-- 游戏头部 -->
+  <view class="game-header">
+    <view class="room-info">
+      <text class="room-code">房间号: {{roomCode}}</text>
+    </view>
+    <view class="game-controls">
+      <button class="control-btn" bindtap="pauseGame">暂停</button>
+      <button class="control-btn" bindtap="exitGame">退出</button>
+    </view>
+  </view>
+
+  <!-- 游戏状态 -->
+  <view class="game-status">
+    <view class="current-player">
+      <text class="player-name">{{currentPlayerName}}</text>
+      <text class="turn-indicator">{{isMyTurn ? '你的回合' : '等待中'}}</text>
+    </view>
+    <view class="game-timer" wx:if="{{!gameEnded}}">
+      <text class="timer-text">{{timeLeft}}秒</text>
+    </view>
+  </view>
+
+  <!-- 游戏棋盘 -->
+  <view class="game-board">
+    <view class="board-container">
+      <view class="board-grid" bindtouchstart="onTouchStart" bindtouchend="onTouchEnd">
+        <view 
+          class="grid-cell" 
+          wx:for="{{board}}" 
+          wx:key="index"
+          data-x="{{item.x}}"
+          data-y="{{item.y}}"
+          style="left: {{item.x * 30}}px; top: {{item.y * 30}}px;"
+        >
+          <view class="cell-content">
+            <view class="piece" wx:if="{{item.piece}}" data-piece="{{item.piece}}"></view>
+            <view class="last-move" wx:if="{{item.isLastMove}}"></view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 玩家信息 -->
+  <view class="players-info">
+    <view class="player-item" wx:for="{{players}}" wx:key="id">
+      <view class="player-avatar">
+        <image src="{{item.avatarUrl}}" class="avatar-img"></image>
+      </view>
+      <view class="player-details">
+        <text class="player-name">{{item.nickname}}</text>
+        <text class="player-status">{{item.status}}</text>
+      </view>
+      <view class="player-score">
+        <text class="score-text">{{item.score}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游戏操作 -->
+  <view class="game-actions" wx:if="{{!gameEnded}}">
+    <button class="action-btn" bindtap="undoMove" disabled="{{!canUndo}}">悔棋</button>
+    <button class="action-btn" bindtap="restartGame">重新开始</button>
+  </view>
+
+  <!-- 游戏结果弹窗 -->
+  <view class="result-modal" wx:if="{{showResult}}">
+    <view class="modal-content">
+      <view class="result-header">
+        <text class="result-title">{{gameResult.title}}</text>
+        <text class="result-subtitle">{{gameResult.subtitle}}</text>
+      </view>
+      <view class="result-players">
+        <view class="result-player" wx:for="{{gameResult.players}}" wx:key="id">
+          <view class="player-info">
+            <image src="{{item.avatarUrl}}" class="player-avatar"></image>
+            <text class="player-name">{{item.nickname}}</text>
+          </view>
+          <text class="player-score">{{item.score}}</text>
+        </view>
+      </view>
+      <view class="result-actions">
+        <button class="result-btn" bindtap="playAgain">再来一局</button>
+        <button class="result-btn" bindtap="backToHome">返回首页</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 暂停弹窗 -->
+  <view class="pause-modal" wx:if="{{showPause}}">
+    <view class="modal-content">
+      <view class="pause-header">
+        <text class="pause-title">游戏暂停</text>
+      </view>
+      <view class="pause-actions">
+        <button class="pause-btn" bindtap="resumeGame">继续游戏</button>
+        <button class="pause-btn" bindtap="exitGame">退出游戏</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 提示信息 -->
+  <view class="hint-toast" wx:if="{{showHint}}">
+    <text class="hint-text">{{hintText}}</text>
+  </view>
+</view>

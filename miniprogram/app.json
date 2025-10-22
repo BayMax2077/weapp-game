@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/games/games",
+    "pages/room/room",
+    "pages/user/user",
+    "pages/shop/shop",
+    "pages/game-eliminating/game-eliminating",
+    "pages/game-flight-chess/game-flight-chess",
+    "pages/game-four-cards/game-four-cards",
+    "pages/game-gobang/game-gobang"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "游戏大厅",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/icons/home.png",
+        "selectedIconPath": "assets/images/icons/home-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/games/games",
+        "iconPath": "assets/images/icons/games.png",
+        "selectedIconPath": "assets/images/icons/games-active.png",
+        "text": "游戏"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "iconPath": "assets/images/icons/shop.png",
+        "selectedIconPath": "assets/images/icons/shop-active.png",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "assets/images/icons/user.png",
+        "selectedIconPath": "assets/images/icons/user-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}
+

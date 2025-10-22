@@ -1,0 +1,133 @@
+<!--pages/games/games.wxml-->
+<view class="container">
+  <!-- 游戏信息头部 -->
+  <view class="game-header" wx:if="{{gameInfo}}">
+    <view class="game-header-bg">
+      <image class="game-bg-image" src="{{gameInfo.backgroundImage || '/assets/images/game-bg.jpg'}}" mode="aspectFill"></image>
+      <view class="game-bg-overlay"></view>
+    </view>
+    <view class="game-header-content">
+      <image class="game-icon-large" src="{{gameInfo.icon || '/assets/images/game-default.png'}}" mode="aspectFill"></image>
+      <view class="game-info">
+        <view class="game-title">{{gameInfo.name}}</view>
+        <view class="game-description">{{gameInfo.description}}</view>
+        <view class="game-stats">
+          <view class="stat-item">
+            <view class="stat-value">{{gameInfo.players || 0}}</view>
+            <view class="stat-label">在线玩家</view>
+          </view>
+          <view class="stat-item">
+            <view class="stat-value">{{gameInfo.rooms || 0}}</view>
+            <view class="stat-label">活跃房间</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮区域 -->
+  <view class="action-section">
+    <view class="action-grid">
+      <!-- 快速开始 -->
+      <button class="action-card primary-action" bindtap="quickMatch">
+        <view class="action-icon">⚡</view>
+        <view class="action-title">快速开始</view>
+        <view class="action-desc">立即匹配玩家</view>
+      </button>
+
+      <!-- 创建房间 -->
+      <button class="action-card secondary-action" bindtap="showCreateRoomDialog">
+        <view class="action-icon">🏠</view>
+        <view class="action-title">创建房间</view>
+        <view class="action-desc">邀请好友一起玩</view>
+      </button>
+
+      <!-- 加入房间 -->
+      <button class="action-card tertiary-action" bindtap="inputRoomCode">
+        <view class="action-icon">🔑</view>
+        <view class="action-title">加入房间</view>
+        <view class="action-desc">输入房间号</view>
+      </button>
+
+      <!-- 游戏规则 -->
+      <button class="action-card info-action" bindtap="showGameRules">
+        <view class="action-icon">📖</view>
+        <view class="action-title">游戏规则</view>
+        <view class="action-desc">了解玩法</view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 房间列表 -->
+  <view class="rooms-section" wx:if="{{roomList.length > 0}}">
+    <view class="section-header">
+      <view class="section-title">可用房间</view>
+      <button class="btn btn-ghost btn-sm" bindtap="refreshRooms">
+        <text class="btn-text">刷新</text>
+      </button>
+    </view>
+    
+    <view class="room-list">
+      <view class="room-card" wx:for="{{roomList}}" wx:key="id" bindtap="joinRoom" data-room-code="{{item.roomCode}}">
+        <view class="room-info">
+          <view class="room-name">{{item.roomName}}</view>
+          <view class="room-details">
+            <view class="room-players">{{item.currentPlayers}}/{{item.maxPlayers}}人</view>
+            <view class="room-status" data-status="{{item.status}}">
+              {{item.status === 'waiting' ? '等待中' : '游戏中'}}
+            </view>
+          </view>
+        </view>
+        <view class="room-actions">
+          <view class="room-code">{{item.roomCode}}</view>
+          <view class="join-indicator">></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{!loading && roomList.length === 0}}">
+    <image class="empty-icon" src="/assets/images/empty-rooms.png" mode="aspectFit"></image>
+    <view class="empty-text">暂无可用房间</view>
+    <view class="empty-desc">创建房间或稍后再试</view>
+    <button class="btn btn-primary" bindtap="showCreateRoomDialog">创建房间</button>
+  </view>
+
+  <!-- 游戏规则弹窗 -->
+  <view class="modal-overlay" wx:if="{{showRules}}" bindtap="hideGameRules">
+    <view class="modal-content" catchtap="true">
+      <view class="modal-header">
+        <view class="modal-title">游戏规则</view>
+        <button class="modal-close" bindtap="hideGameRules">×</button>
+      </view>
+      <view class="modal-body">
+        <view class="rules-content" wx:if="{{gameInfo.rules}}">
+          <rich-text nodes="{{gameInfo.rules}}"></rich-text>
+        </view>
+        <view class="rules-content" wx:else>
+          <view class="rule-item">
+            <view class="rule-title">基本玩法</view>
+            <view class="rule-desc">根据游戏类型，遵循相应的游戏规则进行游戏。</view>
+          </view>
+          <view class="rule-item">
+            <view class="rule-title">获胜条件</view>
+            <view class="rule-desc">率先达到游戏目标或获得最高分数的玩家获胜。</view>
+          </view>
+          <view class="rule-item">
+            <view class="rule-title">注意事项</view>
+            <view class="rule-desc">请遵守游戏礼仪，公平竞技，享受游戏乐趣。</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+</view>

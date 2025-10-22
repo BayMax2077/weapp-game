@@ -1,0 +1,243 @@
+/* pages/index/index.wxss */
+@import "../../styles/common.wxss";
+
+/* 用户信息卡片 */
+.user-info-card {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  margin-bottom: var(--spacing-lg);
+}
+
+.user-info-card .text-secondary {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.user-info-card .badge {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 游戏卡片 */
+.game-card {
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.game-card:hover::before {
+  opacity: 1;
+}
+
+.game-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.game-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
+}
+
+.game-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.game-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.game-desc {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.4;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-xs);
+}
+
+.game-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+}
+
+.game-actions .btn {
+  flex: 1;
+  font-size: 12px;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  min-height: 32px;
+}
+
+/* 快速操作按钮 */
+.quick-action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  min-height: 80px;
+}
+
+.quick-action-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.quick-action-icon {
+  font-size: 24px;
+  margin-bottom: var(--spacing-sm);
+}
+
+.quick-action-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  text-align: center;
+}
+
+.empty-icon {
+  width: 120px;
+  height: 120px;
+  opacity: 0.6;
+  margin-bottom: var(--spacing-lg);
+}
+
+.empty-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.empty-desc {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* 加载覆盖层 */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-primary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+}
+
+.loading-text {
+  margin-top: var(--spacing-md);
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .game-card {
+    padding: var(--spacing-sm);
+  }
+  
+  .game-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .game-name {
+    font-size: 14px;
+  }
+  
+  .game-desc {
+    font-size: 11px;
+  }
+  
+  .quick-action-btn {
+    padding: var(--spacing-md);
+    min-height: 70px;
+  }
+  
+  .quick-action-icon {
+    font-size: 20px;
+  }
+  
+  .quick-action-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .grid-cols-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .game-actions {
+    flex-direction: column;
+  }
+  
+  .game-actions .btn {
+    width: 100%;
+  }
+}

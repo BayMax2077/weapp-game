@@ -1,0 +1,95 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 用户信息卡片 -->
+  <view class="card user-info-card" wx:if="{{userInfo}}">
+    <view class="flex items-center">
+      <image class="avatar avatar-lg" src="{{userInfo.avatarUrl || '/assets/images/default-avatar.png'}}" mode="aspectFill"></image>
+      <view class="flex-1 ml-3">
+        <view class="text-lg font-semibold">{{userInfo.nickname || '游客用户'}}</view>
+        <view class="text-sm text-secondary">欢迎回来！</view>
+      </view>
+      <view class="flex items-center">
+        <view class="badge badge-primary" wx:if="{{userAssets}}">{{userAssets.coins || 0}}</view>
+        <view class="badge badge-success ml-2" wx:if="{{userAssets}}">{{userAssets.diamonds || 0}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游戏列表 -->
+  <view class="card">
+    <view class="card-header">
+      <view class="card-title">热门游戏</view>
+      <view class="card-subtitle">选择你喜欢的游戏开始吧</view>
+    </view>
+    
+    <view class="grid grid-cols-2" wx:if="{{gameList.length > 0}}">
+      <view class="game-card" wx:for="{{gameList}}" wx:key="id" bindtap="onGameSelect" data-game-id="{{item.id}}">
+        <view class="game-card-content">
+          <image class="game-icon" src="{{item.icon || '/assets/images/game-default.png'}}" mode="aspectFill"></image>
+          <view class="game-info">
+            <view class="game-name">{{item.name}}</view>
+            <view class="game-desc">{{item.description}}</view>
+            <view class="game-stats">
+              <view class="label label-primary">{{item.players || 0}}人在玩</view>
+            </view>
+          </view>
+        </view>
+        <view class="game-actions">
+          <button class="btn btn-primary btn-sm" bindtap="quickStart" data-game-id="{{item.id}}" catchtap="true">快速开始</button>
+          <button class="btn btn-outline btn-sm" bindtap="createRoom" data-game-id="{{item.id}}" catchtap="true">创建房间</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 空状态 -->
+    <view class="empty-state" wx:else>
+      <image class="empty-icon" src="/assets/images/empty-games.png" mode="aspectFit"></image>
+      <view class="empty-text">暂无游戏</view>
+      <view class="empty-desc">请稍后再试</view>
+    </view>
+  </view>
+
+  <!-- 快速操作 -->
+  <view class="card">
+    <view class="card-header">
+      <view class="card-title">快速操作</view>
+    </view>
+    
+    <view class="grid grid-cols-2">
+      <button class="btn btn-ghost quick-action-btn" bindtap="onRandomGame">
+        <view class="quick-action-icon">🎲</view>
+        <view class="quick-action-text">随机游戏</view>
+      </button>
+      <button class="btn btn-ghost quick-action-btn" bindtap="onJoinRoom">
+        <view class="quick-action-icon">🏠</view>
+        <view class="quick-action-text">加入房间</view>
+      </button>
+    </view>
+  </view>
+
+  <!-- 最近游戏 -->
+  <view class="card" wx:if="{{recentGames.length > 0}}">
+    <view class="card-header">
+      <view class="card-title">最近游戏</view>
+    </view>
+    
+    <view class="list">
+      <view class="list-item" wx:for="{{recentGames}}" wx:key="id" bindtap="onRecentGame" data-game-id="{{item.id}}">
+        <image class="avatar" src="{{item.icon}}" mode="aspectFill"></image>
+        <view class="list-item-content">
+          <view class="list-item-title">{{item.name}}</view>
+          <view class="list-item-subtitle">上次游戏：{{item.lastPlayTime}}</view>
+        </view>
+        <view class="list-item-action">></view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 加载状态 -->
+<view class="loading-overlay" wx:if="{{loading}}">
+  <view class="loading-content">
+    <view class="loading"></view>
+    <view class="loading-text">加载中...</view>
+  </view>
+</view>

@@ -1,0 +1,537 @@
+/* pages/game-flight-chess/game-flight-chess.wxss */
+@import "../../styles/common.wxss";
+
+.game-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: var(--spacing-md);
+}
+
+/* 游戏头部 */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-info {
+  flex: 1;
+}
+
+.game-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: var(--spacing-sm);
+}
+
+.room-info {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.room-code {
+  margin-bottom: var(--spacing-xs);
+}
+
+.current-player {
+  font-weight: 500;
+}
+
+.game-controls {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+/* 玩家信息 */
+.players-info {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-sm);
+}
+
+.player-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm);
+  min-width: 200px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.player-card.active {
+  border-color: var(--primary-color);
+  background: rgba(99, 102, 241, 0.2);
+  transform: scale(1.02);
+}
+
+.player-avatar {
+  margin-right: var(--spacing-sm);
+}
+
+.player-avatar .avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.player-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.player-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: var(--spacing-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.player-status {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.player-planes {
+  display: flex;
+  gap: var(--spacing-xs);
+}
+
+.plane {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: all 0.3s ease;
+}
+
+.plane.waiting {
+  background: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.plane.ready {
+  background: var(--success-color);
+  color: white;
+}
+
+.plane.flying {
+  background: var(--primary-color);
+  color: white;
+  animation: fly 1s ease-in-out infinite;
+}
+
+.plane.arrived {
+  background: var(--secondary-color);
+  color: white;
+}
+
+@keyframes fly {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* 游戏棋盘 */
+.game-board {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.board-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.board-cell {
+  position: absolute;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.board-cell:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.board-cell.special {
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  color: white;
+  font-weight: 600;
+}
+
+.board-cell.start {
+  background: linear-gradient(135deg, var(--success-color), #34d399);
+  color: white;
+}
+
+.board-cell.finish {
+  background: linear-gradient(135deg, var(--secondary-color), #fbbf24);
+  color: white;
+}
+
+.cell-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.cell-number {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.cell-special {
+  font-size: 10px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.plane-on-cell {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  z-index: 10;
+  animation: bounce 0.5s ease-out;
+}
+
+@keyframes bounce {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.plane-on-cell.red { background: #ef4444; }
+.plane-on-cell.blue { background: #3b82f6; }
+.plane-on-cell.green { background: #10b981; }
+.plane-on-cell.yellow { background: #f59e0b; }
+
+/* 骰子区域 */
+.dice-area {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.dice-container {
+  text-align: center;
+}
+
+.dice {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-sm);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dice:hover {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-xl);
+}
+
+.dice.rolling {
+  animation: roll 1s ease-in-out;
+}
+
+@keyframes roll {
+  0% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(90deg) scale(1.1); }
+  50% { transform: rotate(180deg) scale(1); }
+  75% { transform: rotate(270deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+.dice-face {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dice-text {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+
+/* 游戏提示 */
+.game-hints {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.hint-text {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: var(--shadow-sm);
+  display: inline-block;
+}
+
+/* 可移动飞机选择 */
+.movable-planes {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.planes-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.planes-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.plane-option {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.plane-option:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+}
+
+.plane-option .plane-icon {
+  font-size: 20px;
+  margin-right: var(--spacing-sm);
+}
+
+.plane-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.plane-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: var(--spacing-xs);
+}
+
+.plane-position {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 结果弹窗 */
+.result-modal {
+  max-width: 400px;
+  text-align: center;
+}
+
+.result-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.result-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.result-subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.winner-info {
+  margin-bottom: var(--spacing-lg);
+}
+
+.winner-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto var(--spacing-md);
+  border: 3px solid var(--secondary-color);
+}
+
+.winner-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.winner-text {
+  font-size: 16px;
+  color: var(--success-color);
+  font-weight: 500;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: var(--spacing-lg);
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.result-actions {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.result-actions .btn {
+  flex: 1;
+}
+
+/* 暂停弹窗 */
+.pause-modal {
+  max-width: 300px;
+  text-align: center;
+}
+
+.pause-header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.pause-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pause-actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+/* 响应式设计 */
+@media (max-width: 480px) {
+  .game-container {
+    padding: var(--spacing-sm);
+  }
+  
+  .game-header {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .game-controls {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .players-info {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .player-card {
+    min-width: auto;
+  }
+  
+  .dice {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .dice-face {
+    font-size: 24px;
+  }
+  
+  .result-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .game-title {
+    font-size: 18px;
+  }
+  
+  .player-name {
+    font-size: 12px;
+  }
+  
+  .dice {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .dice-face {
+    font-size: 20px;
+  }
+}

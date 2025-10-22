@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "暂 停",
+    "texture": "78a2ac16-4289-4bc6-a6cc-5c2ef91bdd15",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      118,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      118,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

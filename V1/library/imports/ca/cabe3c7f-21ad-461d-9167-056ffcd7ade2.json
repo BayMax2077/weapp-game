@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "consumables-text",
+    "texture": "dbd34ff5-6feb-4c7b-8c28-572f0d5c768f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      165,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      165,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

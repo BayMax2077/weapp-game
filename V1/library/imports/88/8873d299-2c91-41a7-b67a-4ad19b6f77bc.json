@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "wifi_error",
+    "texture": "21b2cf6e-d5ee-45fe-886b-ac99b099f2c4",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      72,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      72,
+      50
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

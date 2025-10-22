@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "飞行棋",
+    "texture": "055e0d91-7caa-44d4-b784-4c3f2aa1a09d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      163,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      163,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

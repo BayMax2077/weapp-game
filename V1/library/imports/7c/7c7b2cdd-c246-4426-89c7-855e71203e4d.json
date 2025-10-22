@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "实名认证",
+    "texture": "a497d911-ca53-4f08-8498-16fab12a4307",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      170,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      170,
+      37
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

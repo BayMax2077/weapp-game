@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "room-code",
+    "texture": "ae76b7f9-69b6-4b13-8bdb-5561f07e26dc",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      234,
+      71
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      236,
+      71
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

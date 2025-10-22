@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "crystal-col",
+    "texture": "8bb451ba-9811-4e86-9fdb-4dd5677151f9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      329,
+      87
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      329,
+      87
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

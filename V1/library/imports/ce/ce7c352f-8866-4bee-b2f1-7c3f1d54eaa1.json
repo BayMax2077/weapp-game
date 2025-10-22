@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "消除",
+    "texture": "c34dfca8-1335-4773-bebd-02a59e457f62",
+    "atlas": "",
+    "rect": [
+      3,
+      0,
+      128,
+      173
+    ],
+    "offset": [
+      0,
+      1
+    ],
+    "originalSize": [
+      134,
+      175
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

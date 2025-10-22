@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-tcs",
+    "texture": "dd1348ec-8309-4748-b6ff-d01059c1a727",
+    "atlas": "",
+    "rect": [
+      3,
+      0,
+      159,
+      202
+    ],
+    "offset": [
+      0.5,
+      0.5
+    ],
+    "originalSize": [
+      164,
+      203
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

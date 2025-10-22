@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Q-黑桃",
+    "texture": "8c693cca-3768-497e-bb4a-69e9e7bb0b48",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      138,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      138,
+      190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

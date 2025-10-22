@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "麻将",
+    "texture": "3fca67ce-c9b7-4686-ac5e-d6d1940e2d06",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      85,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      85,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

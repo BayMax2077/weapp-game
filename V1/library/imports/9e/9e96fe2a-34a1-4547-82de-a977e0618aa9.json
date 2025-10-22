@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "share_xl",
+    "texture": "620afa9a-39b1-4256-aca7-41263c719cd3",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      166,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      166,
+      48
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

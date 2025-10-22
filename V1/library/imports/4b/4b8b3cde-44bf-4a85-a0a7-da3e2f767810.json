@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "游 戏 列 表",
+    "texture": "d50f06ff-60be-439c-a608-79e782338b44",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      199,
+      48
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      199,
+      48
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

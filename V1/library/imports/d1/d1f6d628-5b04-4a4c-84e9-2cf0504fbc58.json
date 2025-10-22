@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-back",
+    "texture": "9c05cbf7-edee-470d-8de1-080e1a28db37",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      126,
+      130
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      126,
+      130
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

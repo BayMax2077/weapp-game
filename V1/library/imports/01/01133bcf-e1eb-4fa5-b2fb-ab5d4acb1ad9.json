@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "joinr_room_text",
+    "texture": "030eccd1-2550-4d67-af49-be4f808743bd",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      299,
+      70
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      299,
+      70
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "退出登录",
+    "texture": "46f26d5f-fe47-4cd7-b346-33195780417b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      167,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      167,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

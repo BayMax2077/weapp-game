@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "最佳战绩",
+    "texture": "a87ad305-ece9-4160-9a2b-ad7c1705811c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      149,
+      44
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      149,
+      44
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

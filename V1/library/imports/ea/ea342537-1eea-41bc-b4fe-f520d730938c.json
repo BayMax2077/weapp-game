@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "K-方块",
+    "texture": "55b45e75-1430-44a0-a383-9625a00139cb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      137,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      137,
+      190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

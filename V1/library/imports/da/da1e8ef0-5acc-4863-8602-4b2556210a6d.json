@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "绑定手机",
+    "texture": "d22ee1c3-2405-4898-b969-bf300899a5fb",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      172,
+      37
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      172,
+      37
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

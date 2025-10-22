@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "9-红心",
+    "texture": "fd0cf53b-bc07-4ec6-a81b-945aa9c288c2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      138,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      138,
+      190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

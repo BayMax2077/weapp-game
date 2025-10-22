@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Q-梅花",
+    "texture": "d221a13b-b3a1-4bbf-a723-8bda1cb877c2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      137,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      137,
+      190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

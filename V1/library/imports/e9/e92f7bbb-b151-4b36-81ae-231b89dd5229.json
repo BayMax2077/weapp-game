@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Reload btn",
+    "texture": "9cb09e8c-e0a0-4f19-99a4-19ea8594e399",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      94,
+      99
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      95,
+      99
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "1f9208e7-f99a-4f4e-b898-2bdf1cd5008d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 151,
+  "height": 40,
+  "platformSettings": {},
+  "subMetas": {
+    "微信登录": {
+      "ver": "1.0.4",
+      "uuid": "129acce8-7ae8-427a-9d36-766daf010c67",
+      "rawTextureUuid": "1f9208e7-f99a-4f4e-b898-2bdf1cd5008d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 151,
+      "height": 40,
+      "rawWidth": 151,
+      "rawHeight": 40,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

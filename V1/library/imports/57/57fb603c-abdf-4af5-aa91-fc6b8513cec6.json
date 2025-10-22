@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "checkerboard",
+    "texture": "830d1873-efb0-4160-9646-a32fe671d790",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      800,
+      803
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      800,
+      803
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

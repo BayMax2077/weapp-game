@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "onBGM",
+    "texture": "1ffb4d83-fd1f-4787-a8f8-5b4a39f04866",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      43,
+      56
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      43,
+      56
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

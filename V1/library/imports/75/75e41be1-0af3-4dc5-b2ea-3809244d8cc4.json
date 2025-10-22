@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "3-方块",
+    "texture": "48a93684-806b-4cd0-b150-d13f779db8d6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      138,
+      190
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      138,
+      190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

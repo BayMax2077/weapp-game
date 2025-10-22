@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "price-text",
+    "texture": "09278121-620a-4fc1-ba89-bf2bd4a460aa",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      83,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      83,
+      40
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

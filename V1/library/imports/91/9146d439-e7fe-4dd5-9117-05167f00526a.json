@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "青蛙",
+    "texture": "09385869-6088-4d1a-9875-eea3946a1919",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      100,
+      72
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      100,
+      73
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-fxq",
+    "texture": "401237f1-1386-459c-907d-b2219310f6cd",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      112,
+      146
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      114,
+      147
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

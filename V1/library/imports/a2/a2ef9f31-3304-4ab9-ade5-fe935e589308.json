@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Shield icon",
+    "texture": "706b8b15-7655-4094-be37-3c2ff492536a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      71,
+      79
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      72,
+      79
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

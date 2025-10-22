@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets\\scripts\\interface\\game\\flightChessInterface.ts"],"names":[],"mappings":"","file":"","sourceRoot":"/","sourcesContent":["export interface FlightPlayersData {\r\n  id: number;\r\n  nickName: cc.Label;\r\n  box: cc.Node;\r\n  pedestal: [ cc.Sprite ];\r\n  avatarUrl: cc.Sprite;\r\n}"]}

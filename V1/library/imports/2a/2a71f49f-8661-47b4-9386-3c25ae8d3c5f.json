@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "美容",
+    "texture": "619a8f3a-1305-4a46-b948-24fdeec69f0a",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      66,
+      111
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      69,
+      112
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

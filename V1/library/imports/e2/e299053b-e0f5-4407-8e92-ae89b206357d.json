@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "confirmation-exchange",
+    "texture": "45c91e37-6a43-438f-9698-56c0444150fe",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      188,
+      68
+    ],
+    "offset": [
+      -0.5,
+      0.5
+    ],
+    "originalSize": [
+      189,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

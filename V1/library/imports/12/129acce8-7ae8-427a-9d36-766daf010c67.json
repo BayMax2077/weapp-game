@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "微信登录",
+    "texture": "1f9208e7-f99a-4f4e-b898-2bdf1cd5008d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      151,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      151,
+      40
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

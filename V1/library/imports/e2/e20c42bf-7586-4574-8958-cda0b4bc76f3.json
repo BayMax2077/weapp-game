@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "身份证",
+    "texture": "7aeadf6b-4965-43a1-b970-6ad0b2d4693f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      113,
+      40
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      113,
+      40
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

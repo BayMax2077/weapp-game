@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Speaker icon",
+    "texture": "9a524c0b-e04c-433f-bf3a-bda4de6d1cb6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      54,
+      47
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      54,
+      47
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

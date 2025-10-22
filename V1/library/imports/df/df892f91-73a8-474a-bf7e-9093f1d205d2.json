@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Ribbon",
+    "texture": "f52393f8-579c-4bbb-9a33-a29680bd6dc4",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      589,
+      150
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      589,
+      150
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

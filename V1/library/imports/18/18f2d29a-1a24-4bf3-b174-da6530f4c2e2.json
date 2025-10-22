@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "个 人 信 息",
+    "texture": "3791d691-2779-47a5-aaa8-dff2a122e4d2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      222,
+      51
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      222,
+      51
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

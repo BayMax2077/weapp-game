@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "锁",
+    "texture": "9777ccf1-668b-4602-b818-a459f4c7f6bd",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      47,
+      58
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      47,
+      58
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

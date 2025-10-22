@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "磁铁",
+    "texture": "21f92aef-7f6d-4b09-8f7f-ccedd009d01a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      74,
+      77
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      74,
+      77
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

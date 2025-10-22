@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "彩色",
+    "texture": "e85f2a26-44c1-4a8c-8bc1-d1a2bdfc5114",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      117,
+      101
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      119,
+      102
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-ddz",
+    "texture": "77858e94-5b17-428d-900f-180a93397d60",
+    "atlas": "",
+    "rect": [
+      2,
+      0,
+      156,
+      204
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      160,
+      205
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

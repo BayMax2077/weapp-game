@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Reload icon",
+    "texture": "cce88969-fa7d-45d5-be56-5375a6924944",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      66,
+      52
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      66,
+      52
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

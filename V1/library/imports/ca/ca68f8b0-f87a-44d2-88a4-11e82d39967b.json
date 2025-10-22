@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "确认密码",
+    "texture": "dc4f2a87-361f-4277-ae59-cac51008487d",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      166,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      166,
+      41
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

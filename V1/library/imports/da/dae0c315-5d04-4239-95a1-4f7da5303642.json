@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "空温度计",
+    "texture": "0eff3c70-3964-4ee0-9e6b-e1836916ed7c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      400,
+      1141
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      400,
+      1142
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

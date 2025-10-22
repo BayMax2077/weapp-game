@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "旗子",
+    "texture": "ed212fec-feb7-41d4-adfb-bb7a668be3f6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      45,
+      67
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      45,
+      67
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

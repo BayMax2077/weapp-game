@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "公 共 房 间",
+    "texture": "169f4434-b8f3-4a69-9365-53d62b440bdf",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      296,
+      66
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      296,
+      66
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

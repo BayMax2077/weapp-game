@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "鸟",
+    "texture": "57cf6efe-dc8d-444c-b207-6f7db25df530",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      97,
+      80
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      98,
+      80
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

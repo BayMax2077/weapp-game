@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "开启声音",
+    "texture": "7a3c986b-e883-47df-bd31-2e21e642c009",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      33,
+      50
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      33,
+      50
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

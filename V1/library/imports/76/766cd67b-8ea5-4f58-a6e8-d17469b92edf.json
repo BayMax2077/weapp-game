@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "不出",
+    "texture": "2e61eb9b-3f73-466b-9fd7-ccb0810af973",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      122,
+      66
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      122,
+      66
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

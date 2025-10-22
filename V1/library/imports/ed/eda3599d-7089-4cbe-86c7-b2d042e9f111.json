@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "biyan",
+    "texture": "048b5ec0-69f5-49bf-bd5c-ddac6ff954e6",
+    "atlas": "",
+    "rect": [
+      4,
+      8,
+      57,
+      44
+    ],
+    "offset": [
+      0.5,
+      2
+    ],
+    "originalSize": [
+      64,
+      64
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

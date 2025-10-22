@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "开 始 游 戏",
+    "texture": "de70def5-d79a-475f-98ec-2dceda6d63d1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      199,
+      42
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      199,
+      42
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

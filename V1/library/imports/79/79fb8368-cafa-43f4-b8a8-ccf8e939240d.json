@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "旅游",
+    "texture": "84a88fba-5cc0-4acc-88cf-239feed2adcc",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      67,
+      107
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      69,
+      109
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

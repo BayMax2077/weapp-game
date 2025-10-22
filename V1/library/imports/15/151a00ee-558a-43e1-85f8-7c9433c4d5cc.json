@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "消 息",
+    "texture": "4c5db6cd-585f-4a00-9410-89e232e1db33",
+    "atlas": "",
+    "rect": [
+      0,
+      3,
+      64,
+      58
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      64,
+      64
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

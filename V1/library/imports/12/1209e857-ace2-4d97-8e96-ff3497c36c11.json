@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "狐狸-g",
+    "texture": "9d78a43b-7e83-40d7-8f48-7a49aa6f0fa9",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      118,
+      103
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      121,
+      105
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

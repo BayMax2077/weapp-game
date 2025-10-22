@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-wzq",
+    "texture": "fff9362d-fcee-4111-85ca-e1b646647c41",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      112,
+      145
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      114,
+      146
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

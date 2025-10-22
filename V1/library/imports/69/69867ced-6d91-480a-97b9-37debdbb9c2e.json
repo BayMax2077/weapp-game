@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "微信绑定",
+    "texture": "d00b6136-bca5-4d5b-b99c-55512ba32778",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      129,
+      38
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      129,
+      38
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

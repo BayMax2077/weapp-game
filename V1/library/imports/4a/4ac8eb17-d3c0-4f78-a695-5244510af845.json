@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "背景渐变",
+    "texture": "7bad571a-b680-486a-84f3-0651be090554",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      960,
+      639
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      960,
+      639
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

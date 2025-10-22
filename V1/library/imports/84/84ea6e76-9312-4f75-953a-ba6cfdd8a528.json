@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "大王",
+    "texture": "d47fe39f-8756-443b-ada3-da7de6e90f49",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      137,
+      191
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      137,
+      191
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

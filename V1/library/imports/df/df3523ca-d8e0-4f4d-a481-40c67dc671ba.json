@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "bg-effect2",
+    "texture": "3af03075-152f-4ca2-87b6-bff29b41db5a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      552,
+      41
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      552,
+      41
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

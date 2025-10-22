@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "领取",
+    "texture": "2b9c87aa-8886-49d3-bd88-a21800bafede",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      67,
+      36
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      67,
+      36
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

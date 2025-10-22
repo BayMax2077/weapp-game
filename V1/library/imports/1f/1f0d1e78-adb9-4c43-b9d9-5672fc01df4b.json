@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "minBoss",
+    "texture": "13f827b8-960f-44ad-a274-5e0582322904",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      399,
+      526
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      399,
+      526
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

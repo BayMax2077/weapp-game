@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "706b8b15-7655-4094-be37-3c2ff492536a",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 72,
+  "height": 79,
+  "platformSettings": {},
+  "subMetas": {
+    "Shield icon": {
+      "ver": "1.0.4",
+      "uuid": "a2ef9f31-3304-4ab9-ade5-fe935e589308",
+      "rawTextureUuid": "706b8b15-7655-4094-be37-3c2ff492536a",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -0.5,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 71,
+      "height": 79,
+      "rawWidth": 72,
+      "rawHeight": 79,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

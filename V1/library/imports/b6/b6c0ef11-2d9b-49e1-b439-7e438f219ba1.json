@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "More games btn",
+    "texture": "71ca2828-85a6-4ef5-9e78-8443bd2242af",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      95,
+      98
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      95,
+      99
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

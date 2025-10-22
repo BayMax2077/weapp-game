@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "路1",
+    "texture": "de57d730-1fc8-4e28-aaef-f115ad901ed3",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      2000,
+      334
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      2000,
+      337
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

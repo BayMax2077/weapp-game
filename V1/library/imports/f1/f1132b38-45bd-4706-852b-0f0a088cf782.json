@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Successfu_clearance",
+    "texture": "39cd0b13-6a6f-4a02-8023-d649fead29ca",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      304,
+      67
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      304,
+      67
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

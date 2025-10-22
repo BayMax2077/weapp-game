@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "桌面分_",
+    "texture": "1e34e600-22b4-4634-8e43-4645849cb2da",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      210,
+      70
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      211,
+      70
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "益智",
+    "texture": "563875f6-fe35-4279-9691-8e32727e0007",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      84,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      84,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

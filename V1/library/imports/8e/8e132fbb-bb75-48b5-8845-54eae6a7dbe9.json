@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-sfp",
+    "texture": "2e013635-f93d-44f7-aab6-3b5fb71c863e",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      136,
+      163
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      136,
+      164
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

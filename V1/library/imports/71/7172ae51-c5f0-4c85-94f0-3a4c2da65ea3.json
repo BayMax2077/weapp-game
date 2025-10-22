@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "登    录",
+    "texture": "1b775b40-47b8-4737-96bd-700a221f01dc",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      166,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      166,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "电影",
+    "texture": "07dd4425-0d5d-4b9b-8ef8-edde9ebacefd",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      69,
+      109
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      71,
+      109
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

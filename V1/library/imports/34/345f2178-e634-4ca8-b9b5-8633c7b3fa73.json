@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "老鼠-g",
+    "texture": "8744b926-cd7d-4580-94f6-21acbae0fb9c",
+    "atlas": "",
+    "rect": [
+      1,
+      1,
+      114,
+      103
+    ],
+    "offset": [
+      0,
+      -0.5
+    ],
+    "originalSize": [
+      116,
+      104
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

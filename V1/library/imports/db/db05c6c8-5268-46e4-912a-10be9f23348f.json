@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "email-left-top-bg",
+    "texture": "9cd3cf56-7170-43c7-b901-44f7b9225c32",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      373,
+      260
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      373,
+      260
+    ],
+    "capInsets": [
+      44,
+      47,
+      51,
+      35
+    ]
+  }
+}

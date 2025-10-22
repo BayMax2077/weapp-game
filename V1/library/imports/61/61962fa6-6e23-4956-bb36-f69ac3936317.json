@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "通知",
+    "texture": "00c633c9-e961-404a-b6c7-cccf595e4f74",
+    "atlas": "",
+    "rect": [
+      4,
+      0,
+      56,
+      64
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      64,
+      64
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "jewel-1",
+    "texture": "c20ed94a-224e-4711-addd-619ec7d59d7b",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      45,
+      39
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      46,
+      39
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["assets\\scripts\\interface\\home.ts"],"names":[],"mappings":"","file":"","sourceRoot":"/","sourcesContent":["/**\r\n * 活动内容\r\n */\r\nexport interface ActivityItem {\r\n    id: number; \r\n    title: string;\r\n    url: string;\r\n    pcitrue: string;\r\n    html: string;\r\n    disable: number;\r\n}\r\n"]}

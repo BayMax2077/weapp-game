@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "公共房间",
+    "texture": "292ee6ae-272c-4a72-a0a0-18fb8215393c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      200,
+      215
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      215
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

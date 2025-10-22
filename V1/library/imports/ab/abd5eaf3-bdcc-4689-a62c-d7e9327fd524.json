@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "arraw",
+    "texture": "754f9f03-eab5-427a-813a-66edd661a550",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      81,
+      69
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      81,
+      69
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "等待玩家加入",
+    "texture": "b6ff9ed4-ca7c-4c36-a2cf-67b15d70f2c9",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      376,
+      71
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      376,
+      71
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

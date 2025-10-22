@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "后退",
+    "texture": "e79158e3-f9be-43d4-9161-04e9fc697a3b",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      165,
+      170
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      167,
+      171
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

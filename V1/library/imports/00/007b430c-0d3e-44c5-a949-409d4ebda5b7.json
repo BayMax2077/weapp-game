@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "四副牌",
+    "texture": "c6f01d51-5089-45ab-9069-6f7524e63f8f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      166,
+      47
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      166,
+      47
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

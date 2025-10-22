@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "账号登录",
+    "texture": "9740f83e-bed9-401e-be3c-a1ef6d532b4a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      165,
+      43
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      165,
+      43
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

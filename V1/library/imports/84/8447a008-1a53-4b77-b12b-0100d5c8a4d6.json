@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "代金券",
+    "texture": "e6fabbbb-8265-41a8-8e2b-98a3c6329e1a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      224,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      224,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

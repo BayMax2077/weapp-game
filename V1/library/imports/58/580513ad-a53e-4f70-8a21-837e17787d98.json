@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "portrait-frame",
+    "texture": "4006555e-9c0e-4540-abff-fa371c710106",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      209,
+      210
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      209,
+      210
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

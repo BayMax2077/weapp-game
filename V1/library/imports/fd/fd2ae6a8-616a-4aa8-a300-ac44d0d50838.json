@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "发送",
+    "texture": "03c38215-4e92-426c-a3cc-25144e536ca2",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      88,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      88,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

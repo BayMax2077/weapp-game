@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "A-方块",
+    "texture": "35a18deb-102c-4620-9aa8-a9f677534b09",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      137,
+      191
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      137,
+      191
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

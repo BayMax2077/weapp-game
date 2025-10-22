@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "养生",
+    "texture": "aee61981-8a8d-47e0-82cb-f6d46c6aa38d",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      66,
+      103
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      68,
+      103
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

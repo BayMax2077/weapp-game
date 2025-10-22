@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "温度计",
+    "texture": "78637e75-68ca-4c87-874c-45f555bf0660",
+    "atlas": "",
+    "rect": [
+      1,
+      0,
+      399,
+      1190
+    ],
+    "offset": [
+      0.5,
+      0
+    ],
+    "originalSize": [
+      400,
+      1190
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

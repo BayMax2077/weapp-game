@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "验证码",
+    "texture": "b60fbe41-a2cb-415d-b4a2-c8d52845633f",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      124,
+      39
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      124,
+      39
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

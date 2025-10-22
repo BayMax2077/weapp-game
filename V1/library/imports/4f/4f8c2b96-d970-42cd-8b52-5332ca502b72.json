@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "分币",
+    "texture": "4356d5b8-2dc3-42de-a282-8e2c7b68866a",
+    "atlas": "",
+    "rect": [
+      0,
+      1,
+      82,
+      82
+    ],
+    "offset": [
+      -0.5,
+      -0.5
+    ],
+    "originalSize": [
+      83,
+      83
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

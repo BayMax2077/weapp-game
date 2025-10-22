@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "五子棋",
+    "texture": "6fd305cf-4f61-44c3-82f1-3e5f87a6b1ea",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      163,
+      44
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      163,
+      44
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

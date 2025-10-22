@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "注    册",
+    "texture": "d813325a-d82c-4269-8f0d-b9348fcbbb4a",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      165,
+      45
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      165,
+      45
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

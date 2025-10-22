@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "测试须知",
+    "texture": "49860644-32f6-44f1-8d71-d4c317efe287",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      227,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      227,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

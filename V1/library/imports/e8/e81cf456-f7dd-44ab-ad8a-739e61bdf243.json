@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "发送验证",
+    "texture": "6783db45-5543-4c74-8578-1d9f53768002",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      168,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      168,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

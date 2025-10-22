@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pd-room",
+    "texture": "095dd7df-18d8-4f26-a9c1-811f9608b74c",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      200,
+      61
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      200,
+      61
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Play icon",
+    "texture": "d682311a-8c53-49ea-92ce-3f3192c32c63",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      39,
+      46
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      39,
+      46
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gameList-pd",
+    "texture": "978d9c56-2278-49eb-959b-5fea3f83737b",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      17,
+      16
+    ],
+    "offset": [
+      0,
+      0.5
+    ],
+    "originalSize": [
+      17,
+      17
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
